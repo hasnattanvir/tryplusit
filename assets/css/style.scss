@@ -1,38 +1,68 @@
 @import "../scss/bootstrap/bootstrap";
 @import "../css/wp-core.css";
 //-------------------- font family --------------------
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
-$primary-font: 'Roboto',
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* ------------------------Fonts variable----------------------- */
+
+$thin:100;
+$wght:300;
+$regular:400;
+$medium:500;
+$bold:700;
+
+/* ------------------------Fonts variable----------------------- */
+
+$primary-font: 'Ubuntu',
 sans-serif;
-// colors
-$primary: #333333;
-$secondary: #12B3F3;
-// $third:;
-$forth-gray:#EEEEEE;
-$content: #000;
-$light-content: #fff;
-$secondary-bg: rgba(2,
-0,
-36,
-0.8);
-$black-content:#110F2C;
-// start templates css
-// media
+
+/* ------------------------colors variable----------------------- */
+
+$primary-text-color:#323232;
+$secondary-color:#7952B3;
+$green:#27B261;
+$greenlight:#AEDBC1;
+$gray-text-color:#646464;
+$white-color:#fff;
+$black-color:#000;
+
+/* ------------------------- section bg color --------------------*/
+
+$bg-primary:#fff;
+$bg-secondary:#EBF3FF;
+.bg-primry {
+    background-color: $bg-primary;
+}
+
+.bg-secondry {
+    background-color: $bg-secondary;
+}
+
+
+/* ------------------------media mixin--------------------------- */
+
 @mixin minwidth($width) {
     @media only screen and (min-width: $width) {
         @content;
     }
 }
 
+
+/* ------------------------body css --------------------------- */
+
 body {
     // overflow: hidden;
     font-family: $primary-font;
     font-size: 16px;
+    font-weight: $regular;
     line-height: 1.5;
-    @include minwidth(992px) {
-        font-size: 18px;
-    }
+    // @include minwidth(992px) {
+    //     font-size: 18px;
+    // }
 }
+
+
+/* ------------------- Start Typography ----------------------- */
 
 img {
     max-width: 100%;
@@ -40,12 +70,12 @@ img {
 }
 
 a {
-    color: $secondary;
+    color: $secondary-color;
     transition: all 0.4s;
     &:hover,
     &:active,
     &:focus {
-        color: $secondary;
+        color: $secondary-color;
         text-decoration: none;
     }
 }
@@ -95,8 +125,8 @@ input[type="reset"],
 input[type="submit"] {
     transition: all 0.4s;
     display: inline-block;
-    background-color: $primary;
-    color: $light-content;
+    background-color: $primary-text-color;
+    color: $white-color;
     border: none;
     padding: 5px 15px;
 }
@@ -260,7 +290,7 @@ table {
     @extend .table,
     .table-bordered;
     th {
-        background: $content;
+        background: $black-color;
         color: #fff;
         font-weight: 700;
         @include minwidth(992px) {
@@ -334,44 +364,33 @@ table {
     }
 }
 
-.ibg {
-    background-color: $secondary-bg;
-    color: $light-content;
-    /* a {
-		color: $light-content;
-	} */
-}
-
-.sbgl {
-    background-color: $light-content;
-}
-
 $btn_backcolor:#0DC6F6;
 .btn {
-    &.btn-primary {
-        // border: 1px solid $btn_backcolor;
-        // border-radius: 25px;
-        // padding: 20px 48px;
-        // &:hover {
-        //     background-color: $btn_backcolor;
-        //     transition: 0.5s;
-        // }
+    &.btn-primariey {
+        padding: 15px 12px 15px 12px;
+        @include minwidth(991px) {
+            padding: 18px 16px 18px 16px;
+        }
+        border-radius: 12px;
+        background-color: $secondary-color;
+    }
+    &.btn-primariey:hover {
+        background-color: #9564de;
+        color: $white-color;
     }
     &.btn-seconday {
-        border: 1px solid $btn_backcolor;
-        border-radius: 25px;
-        padding: 20px 48px;
-        background-color: $light-content;
-        color: $btn_backcolor;
-        font-weight: bold;
-        &:hover {
-            background-color: $btn_backcolor;
-            transition: 0.5s;
-            color: $light-content;
-            font-weight: 400;
+        padding: 15px 12px 15px 12px;
+        @include minwidth(991px) {
+            padding: 18px 16px 18px 16px;
         }
+        border-radius: 12px;
     }
-} // end buttons
+}
+
+.bg-color-primary {
+    background: $bg-primary;
+}
+
 
 /* ------------------------ end site typography ----------------------*/
 
@@ -379,7 +398,7 @@ $btn_backcolor:#0DC6F6;
 /* ------------------------ start main css ----------------------*/
 
 .container {
-    width: 1110px;
+    width: 1140px;
     max-width: 100%;
 }
 
@@ -401,7 +420,7 @@ $btn_backcolor:#0DC6F6;
 
 header {
     .navbar {
-        padding: 0px;
+        // padding: 32px 0px 32px 0px;
         .logos {
             padding-top: 18px;
             padding-bottom: 18px;
@@ -425,13 +444,13 @@ header {
             &:focus {
                 outline: none;
             }
-            border: 1px solid $light-content;
+            border: 1px solid $white-color;
             cursor: pointer;
             width: 49px;
             background-color: rgba(0,
             0,
             0,
-            0.65);
+            0.0);
             height: 41px;
             border: 1px solid #ffffff94;
             display: flex;
@@ -442,7 +461,7 @@ header {
             .navbar-toggler-inner::after {
                 width: 1em;
                 height: 0.16em;
-                background-color: $light-content;
+                background-color: $black-color;
                 position: absolute;
             }
             .navbar-toggler-inner::before {
@@ -482,6 +501,8 @@ header {
         // humbager animation
         .navbar-collapse {
             .navbar-nav {
+                margin: 0px;
+                padding-top: 8px;
                 flex-wrap: wrap;
                 justify-content: flex-end;
                 .nav-item {
@@ -497,8 +518,9 @@ header {
                         .dropdown-item {
                             text-align: center;
                             font-size: 16px;
+                            font-weight: 400;
                             font-family: $primary-font;
-                            color: $light-content;
+                            color: $primary-text-color;
                             text-decoration: none;
                             margin: 0px;
                             height: auto;
@@ -507,7 +529,7 @@ header {
                         .dropdown-item:focus {
                             background-color: unset;
                             text-decoration: underline;
-                            text-decoration-color: $secondary;
+                            text-decoration-color: $secondary-color;
                             text-decoration-style: solid;
                             text-decoration-thickness: 3px;
                             text-underline-offset: 4px;
@@ -517,7 +539,7 @@ header {
                         text-align: center;
                         font-size: 16px;
                         font-family: $primary-font;
-                        color: $light-content;
+                        color: $primary-text-color;
                         text-decoration: none;
                         margin: 0px;
                         height: auto;
@@ -532,7 +554,7 @@ header {
                             border-left: 0.3em solid transparent;
                         }
                         @include minwidth(992px) {
-                            padding: 0px 19px 0px 19px;
+                            padding: 0px 25px 0px 25px;
                         }
                     }
                     @include minwidth(992px) {
@@ -543,7 +565,7 @@ header {
                             display: block;
                             width: 0px;
                             height: 3px;
-                            background-color: $light-content;
+                            background-color: $white-color;
                             transition: width 0.3s;
                         }
                         .nav-link-hover:hover::after {
@@ -555,7 +577,7 @@ header {
                 }
                 .nav-item:hover .nav-link {
                     text-decoration: underline;
-                    text-decoration-color: $light-content;
+                    text-decoration-color: $white-color;
                     text-decoration-style: solid;
                     text-decoration-thickness: 3px;
                     text-underline-offset: 4px;
@@ -581,9 +603,12 @@ header {
                     transform-origin: top center;
                     display: block !important;
                 }
-                .nav-item:last-child .nav-link {
-                    padding-right: 0px;
-                }
+                // .nav-item:last-child .nav-link {
+                //     padding-right: 0px;
+                // }
+            }
+            .primary-btn {
+                text-align: center;
             }
             @include minwidth(992px) {}
         }
@@ -614,7 +639,7 @@ header {
         padding: 230px 0px;
     }
     .h2 {
-        color: $light-content;
+        color: $white-color;
         margin: 0px;
         @include minwidth(576px) {
             font-size: 30px;
@@ -628,523 +653,553 @@ header {
     }
 }
 
-// --------------- start about section ---------------
-.about_sec_1 {
-    padding: 60px 0px;
-    position: relative;
-    .img_wrapper {
-        width: 100%;
-        img {
-            width: 100%;
+
+/* ----------------------- slider section ----------------*/
+
+.banner-slider {
+    .inner-box {
+        padding-top: 55px;
+        padding-bottom: 80px;
+        .bannar-text {
+            width: 477px;
             max-width: 100%;
-        }
-    }
-    @include minwidth(768px) {
-        padding: 120px 0px;
-        .img_wrapper {
-            position: absolute;
-            width: 540px;
-            img {
-                max-width: 100%;
-            }
-        }
-    }
-    .inner_box {
-        color: $primary;
-        background: rgba(255, 255, 255, 0.80%);
-        .h2 {
-            padding-top: 30px;
-            margin-bottom: 15px;
-        }
-        .h4 {
-            margin-bottom: 15px;
-        }
-        .h5 {
-            margin-bottom: 15px;
-        }
-        p {
-            color: $primary;
-            margin-bottom: 15px;
-            font-weight: 300;
-        }
-        @include minwidth(768px) {
-            padding: 53px;
-            margin-top: 35px;
-            .h2 {
-                padding: 0px;
-                font-size: 40px;
-                margin-bottom: 33px;
-            }
-            .h4 {
-                font-size: 22px;
-                margin-bottom: 33px;
-            }
-            .h5 {
-                font-size: 18px;
-                margin-bottom: 33px;
-            }
-            p {
-                font-size: 18px;
-            }
-        }
-    }
-}
-
-// ------------- subscribe section -----------------------
-$green:#05809F;
-.about-s-s {
-    background: $green;
-}
-
-.subscribe {
-    padding-top: 24px;
-    padding-bottom: 24px;
-    @include minwidth(991px) {
-        padding-top: 48px;
-        padding-bottom: 48px;
-    }
-    span {
-        display: block;
-        font-size: 18px;
-        padding-bottom: 20px;
-        font-family: $primary-font;
-        color: $light-content;
-        font-weight: 500;
-        @include minwidth(576px) {
-            padding-bottom: 0px;
-            padding-top: 12px;
-        }
-        @include minwidth(991px) {
-            padding-top: 12px;
-            font-size: 22px;
-        }
-    }
-    .input_subs {
-        .subs {
-            font-size: 16px;
-            font-weight: 300;
-            height: 40px!important;
-            border-radius: 6px;
-            border-top-right-radius: unset;
-            border-bottom-right-radius: unset;
-        }
-        button {
-            height: 40px!important;
-            font-family: $primary;
-            border-left: 1px solid $green;
-            border-top-left-radius: unset;
-            border-bottom-left-radius: unset;
-            background: $light-content;
-            color: $secondary;
-            font-weight: 500;
-            @include minwidth(991px) {
-                font-size: 22px;
-            }
-        }
-        @include minwidth(576px) {
-            .subs {
-                height: 50px!important;
-            }
-            button {
-                height: 50px!important;
-            }
-        }
-    }
-}
-
-// --------------------------- service page ----------------
-.gutter_y {
-    padding-bottom: 70px;
-}
-
-.service_s_1 {
-    padding-top: 35px;
-    @include minwidth(991px) {
-        padding-top: 70px;
-    }
-    .title_s {
-        .h3 {
-            font-family: $primary-font;
-            color: $primary;
-            font-weight: 500;
-            margin-bottom: 32px;
-        }
-        .para {
-            margin-bottom: 32px;
-            font-weight: 300;
-        }
-        @include minwidth(991px) {
-            .h3 {
-                font-size: 25px;
+            .h1 {
+                font-weight: $bold;
+                margin-bottom: 25px;
             }
             .para {
-                font-size: 18px;
-            }
-        }
-    }
-}
-
-.service_s_2 {
-    .imgs {
-        img {
-            width: 100%;
-        }
-    }
-    .text_s {
-        .h3 {
-            color: $primary;
-            font-family: $primary;
-            margin-bottom: 34px;
-            font-weight: 500;
-        }
-        .para {
-            color: $primary;
-            font-family: $primary;
-            margin-bottom: 34px;
-            font-weight: 300;
-        }
-        @include minwidth(991px) {
-            .h3 {
-                font-size: 25px;
-            }
-            .para {
-                font-size: 18px;
-            }
-        }
-    }
-}
-
-$gary_1:#707070;
-.service_s_3 {
-    .inner_boxs {
-        .imgs {
-            overflow: hidden;
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            border: 1px solid $gary_1;
-            padding-top: 13px;
-        }
-        .texts {
-            padding-top: 28px;
-            .h3 {
-                font-family: $primary-font;
-                color: $primary;
+                font-weight: $regular;
                 margin-bottom: 30px;
             }
-            .para {
-                font-family: $primary-font;
-                color: $primary;
-                font-weight: 300;
-            }
             @include minwidth(991px) {
-                .h3 {
-                    font-size: 25px;
+                padding-top: 110px;
+                padding-bottom: 165px;
+                .h1 {
+                    font-size: 54px;
+                    margin-bottom: 32px;
                 }
                 .para {
-                    font-size: 18px;
+                    margin-bottom: 56px;
                 }
             }
         }
     }
 }
 
-// ------------------------ service page end ----------------
-// ------------------------ blog page ------------------------
-.blog_s_1 {
-    .inner_box_b {
-        .imgs {
-            padding-bottom: 25px;
-            overflow: hidden;
-            img {
-                width: 100%;
+
+/* ------------------------ start service -------------------*/
+
+.gutter-30 {
+    padding-bottom: 30px;
+    @include minwidth(768px) {
+        padding-bottom: 0px;
+    }
+}
+
+.common-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @include minwidth(991px) {
+        padding-top: 65px;
+        padding-bottom: 98px;
+    }
+    width: 480px;
+    max-width: 100%;
+    .h2 {
+        font-family: $primary-font;
+        font-weight: bold;
+        margin-bottom: 25px;
+        color: $primary-text-color;
+        @include minwidth(991px) {
+            font-size: 40px;
+            margin-bottom: 38px;
+        }
+    }
+    .para {
+        color: $gray-text-color;
+        margin-bottom: 0px;
+    }
+}
+
+.service {
+    padding-bottom: 30px;
+    @include minwidth(991px) {
+        padding-bottom: 60px;
+    }
+    .service-card {
+        padding: 32px;
+        border-radius: 12px;
+        border: 1px solid rgba(0, 0, 0, 0.10%);
+        .icon-camber {
+            margin-bottom: 25px;
+            width: 64px;
+            height: 64px;
+            border-radius: 12px;
+            text-align: center;
+            color: $white-color;
+            i {
+                font-size: 25px;
+                padding: 18px 0px 0px 5px;
             }
         }
-        .texts {
-            .a {
-                color: $primary!important;
-                font-size: 14px;
-                margin-bottom: 33px;
-                font-weight: 300;
-            }
-            .h3 {
+        .cam-1 {
+            background: $green;
+        }
+        .cam-2 {
+            background: $secondary-color;
+        }
+        .cam-3 {
+            background: $greenlight;
+        }
+        .text-camber {
+            .h2 {
                 font-size: 22px;
-                font-weight: 500;
+                font-weight: $medium;
+                color: $primary-text-color;
+                margin-bottom: 20px;
+                @include minwidth(991px) {
+                    font-size: 24px;
+                }
             }
             .para {
-                margin-bottom: 22px;
-                font-weight: 300;
+                color: $gray-text-color;
+                margin-bottom: 40px;
             }
-            .btn-seconday {
-                display: inline-block;
-                font-weight: 300;
-            }
-            @include minwidth(991px) {
-                .para {
-                    margin-bottom: 55px;
-                    font-size: 18px;
-                }
-                .btn-seconday {
-                    display: inline-block;
-                    font-size: 18px;
-                }
+            .a {
+                color: $secondary-color;
+                font-weight: $medium;
+                text-decoration: underline;
             }
         }
     }
+    .service-card:hover {
+        cursor: pointer;
+        transition: all 0.4s;
+        -webkit-box-shadow: 0px 12px 22px 25px rgba(0, 0, 0, 0.04);
+        box-shadow: 0px 12px 22px 25px rgba(0, 0, 0, 0.04);
+    }
 }
 
-// ----------------------- blog details ----------------------------
-.blogdetails_s_1 {
-    .imgs {
+// ---------------------------- start video section --------------
+.video {
+    padding-bottom: 100px;
+    .common-section {
+        padding-top: 50px;
+        padding-bottom: 58px;
+    }
+    .video-card {
+        width: 100%;
         img {
             width: 100%;
         }
-    }
-    .texts {
-        .a {
-            font-size: 14px;
-            font-family: $primary-font;
-            margin-bottom: 26px;
-            display: block;
-            color: $primary;
-            font-weight: 300;
+        .modal-video-close-btn {
+            position: absolute;
+            z-index: 2;
+            top: -45px!important;
+            right: 0;
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            overflow: hidden;
+            border: none;
+            background: transparent;
         }
-        .h3 {
-            font-family: $primary-font;
-            margin-bottom: 30px;
-            color: $primary;
-            font-weight: 500;
+    }
+}
+
+
+/* ----------------------- start service2 -------------------- */
+
+.service2 {
+    padding-bottom: 50px;
+    @include minwidth(991px) {
+        padding-bottom: 130px;
+    }
+    .picture-camber {
+        width: 100%;
+        .imgs {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .text-camber {
+        @include minwidth(991px) {
+            padding-left: 35px;
+        }
+        .h2 {
+            margin-top: 20px;
+            font-weight: $bold;
+            margin-bottom: 25px;
+            color: $primary-text-color;
+            @include minwidth(991px) {
+                font-size: 40px;
+            }
         }
         .para {
-            font-family: $primary-font;
-            color: $primary;
-            font-weight: 300;
+            margin-bottom: 16px;
+            color: $gray-text-color;
         }
-        @include minwidth(991px) {
-            .h3 {
-                font-size: 25px;
+        .minicard {
+            padding: 15px;
+            @include minwidth( 480px) {
+                padding: 20px 25px 32px 25px;
             }
-            .para {
-                font-size: 18px;
+            border: 1px solid rgba(0,
+            0,
+            0,
+            0.10%);
+            border-radius: 12px;
+            margin-top: 16px;
+            .icon-ceamber {
+                border-radius: 12px;
+                width: 30px;
+                height: 30px;
+                margin-top: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include minwidth(550px) {
+                    width: 60px;
+                    height: 60px;
+                }
+                i {
+                    font-size: 18px;
+                    color: $white-color;
+                    @include minwidth(550px) {
+                        font-size: 25px;
+                    }
+                }
+            }
+            .icon-bg-1 {
+                background-color: $green;
+            }
+            .icon-bg-2 {
+                background-color: $secondary-color;
+            }
+            .icon-bg-3 {
+                background-color: $greenlight;
+            }
+            .text-camber {
+                padding-left: 15px;
+                @include minwidth(991px) {
+                    padding-left: 20px;
+                }
+                .h3 {
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin-bottom: 16px;
+                }
+                .para {
+                    color: $gray-text-color;
+                    margin-bottom: 0px;
+                }
             }
         }
     }
 }
 
-// --------------------- testimoinials page --------------------
-.test_s_1 {
-    .img {
-        width: 100%;
-    }
+
+/*----------------------- start catagori section -------------*/
+
+.gutter-58 {
+    padding-bottom: 58px;
 }
 
-.test_s_2 {
-    padding: 47px 0px;
-    .wrapper_box {
-        padding-bottom: 36px;
-    }
-    .img_readius {
-        margin-bottom: 10px;
-        width: 79px;
-        height: 79px;
-        border-radius: 50%;
-        border: 5px solid $gary_1;
-        overflow: hidden;
-        img {
-            width: 100%;
-        }
+.catagori {
+    padding-top: 22px;
+    padding-bottom: 50px;
+    @include minwidth(991px) {
+        padding-top: 44px;
+        padding-bottom: 100px;
     }
     .title {
-        padding-left: 10px;
-        .span {
-            display: block;
-            font-size: 20px;
-            font-family: $primary-font;
-            margin-bottom: 8px;
-            color: $primary;
-            font-weight: 400;
-        }
-        a {
-            color: $primary;
-            font-size: 16px;
-            font-weight: 300;
-        }
-    }
-    .paras {
-        i {
-            font-size: 25px;
-            color: $secondary;
-            margin-bottom: 10px;
-        }
-        .para {
-            font-weight: 300;
-            color: $primary;
-            margin-bottom: 10px;
-            @include minwidth(991px) {
-                font-size: 18px;
-            }
-        }
-    }
-}
-
-// ------------------------- end testimonials page -----------------------------------
-// ------------------------- start faq page ------------------------------------------
-.faq_section_1 {
-    padding-top: 35px;
-    padding-bottom: 27px;
-    @include minwidth(991px) {
-        padding-top: 70px;
-        padding-bottom: 56px;
-    }
-    .paras {
-        .h3 {
-            font-family: $primary;
-            margin-bottom: 30px;
-            color: $primary;
-            font-weight: 500;
-        }
-        .para {
-            font-weight: 300;
-            color: $primary;
-            font-weight: 300;
-        }
+        margin-bottom: 30px;
         @include minwidth(991px) {
-            .h3 {
-                font-size: 30px;
-            }
-            .para {
-                font-size: 18px;
+            margin-bottom: 72px;
+        }
+        .h2 {
+            font-weight: $bold;
+            color: $primary-text-color;
+            margin: 0px;
+            @include minwidth(991px) {
+                font-size: 40px;
             }
         }
     }
-    .imgs {
+    .para-cover {
+        padding-bottom: 30px;
+        @include minwidth(991px) {
+            padding-bottom: 72px;
+            padding-left: 74px;
+        }
+        .para {
+            color: $gray-text-color;
+            margin: 0px;
+        }
+    }
+    .cover-box {
         img {
             width: 100%;
         }
-    }
-}
-
-// ========== qustions ============= 
-.faq_section_2 {
-    .cont_main {
-        .control_pad {
-            margin-bottom: 20px;
-        }
-        .accordion {
-            .qustions_icon {
-                background: $secondary;
-                color: $light-content;
-                i {
-                    font-size: 25px;
-                    padding: 16px 19px;
-                }
-            }
-            background: #ECECEC;
-            padding: 0px;
-            border: unset;
-            cursor: pointer;
-            width: 100%;
-            text-align: left;
-            outline: none;
-            transition: 0.4s;
-            border-radius: 5px;
-            .h4 {
-                font-family: $primary-font;
-                color: $primary;
-                font-size: 18px;
-                margin: 0px;
-                padding: 18px 0px 18px 15px;
+        .text-camber {
+            width: 80%;
+            padding-top: 20px;
+            .h3 {
+                font-size: 24px;
+                color: $primary-text-color;
                 font-weight: 500;
+                margin-bottom: 20px;
+            }
+            .para {
+                color: $gray-text-color;
+                margin: 0px;
             }
         }
-        .active,
-        .accordion:hover {
-            background: #ECECEC;
-            transition: 0.4s;
-            .qusion_icon {
-                background: $black-content;
-            }
-        }
-        .panel {
-            width: 100%;
-            max-width: 100%;
-            padding: 0px;
-            background-color: $light-content;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-            p {
-                color: $primary;
-                padding: 8px 14px 9px 62px;
-                margin-top: 16px;
-                font-weight: 300;
-                @include minwidth(991px) {
-                    font-size: 18px;
-                }
-            }
+    }
+    .btn-primariey {
+        padding: 18px 25px;
+        @include minwidth(991px) {
+            padding: 25px 50px;
         }
     }
 }
 
-// -------------------------- start contact page -------------------
-.bg-transparent {
-    background-color: rgba(0, 0, 0, 0.70)!important;
-    padding-top: 48px;
-    padding-bottom: 48px;
-    @include minwidth(991px) {
-        padding-top: 99px;
-        padding-bottom: 99px;
-    }
-}
 
-.gutter_contact {
-    padding: 20px 0px;
-    @include minwidth(576px) {
-        padding: 0px 0px;
-    }
-}
+/*----------------- start quotesilder ------------------------*/
 
-.contact_section_1 {
+.quoteslider {
+    padding: 50px 0px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
-    .location_box {
-        .circles_icon {
-            color: $light-content;
-            width: 50px;
-            height: 50px;
-            border: 1px solid $light-content;
+    background-color: #EBF3FF;
+    @include minwidth(991px) {
+        padding: 100px 0px;
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction .container-text {
+        bottom: 0px!important;
+    }
+    .container-text {
+        width: 610px;
+        max-width: 100%;
+        .mask-picture {
+            width: 88px;
+            height: 88px;
+            background-color: $green;
             border-radius: 50%;
             i {
-                font-size: 20px;
-                padding-top: 15px;
-            }
-            @include minwidth(991px) {
-                width: 78px;
-                height: 78px;
-                i {
-                    padding-top: 17px;
-                    font-size: 40px;
-                }
+                color: $white-color;
+                font-size: 50px;
             }
         }
     }
-    .information_text {
-        padding-top: 10px;
-        color: $light-content;
-        font-weight: 300;
-        .phone {
-            font-size: 18px;
-            font-weight: bold;
+    .text-camber {
+        padding-top: 25px;
+        @include minwidth(991px) {
+            padding-top: 36px;
         }
-        a {
-            color: $light-content;
+        .coma {
+            width: 23px;
+            height: 19px;
+        }
+        p {
+            padding-left: 20px;
+            padding-right: 20px;
+            color: $gray-text-color;
+            font-size: 18px;
+            margin-bottom: 18px;
+        }
+        .h6 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 18px;
         }
         @include minwidth(991px) {
-            font-size: 18px;
-            .phone {
-                font-size: 18px;
+            p {
+                margin-bottom: 24px;
             }
+            .h6 {
+                margin-bottom: 22px;
+            }
+        }
+    }
+}
+
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    li {
+        list-style: none;
+        margin: 0px;
+    }
+}
+
+
+/* ------------------ start subscriber sections -------------*/
+
+.subscribes {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    @include minwidth(768px) {
+        padding-top: 50px;
+        padding-bottom: 36px;
+    }
+    @include minwidth(991px) {
+        padding-top: 100px;
+        padding-bottom: 76px;
+    }
+    .border-radius-12 {
+        background-color: $secondary-color;
+        border-radius: 12px;
+    }
+    .common-section {
+        padding-top: 67px;
+        padding-bottom: 67px;
+        width: 535px;
+        max-width: 100%;
+        .h2 {
+            color: $white-color;
+            margin-bottom: 32px;
+            font-weight: $bold;
+        }
+        .paras {
+            width: 345px;
+            max-width: 100%;
+            margin: auto;
+        }
+        .para {
+            color: $white-color;
+            margin-bottom: 38px;
+        }
+        .input_cover {
+            width: 412px;
+            max-width: 100%;
+            margin: auto;
+            form {
+                margin: 0px;
+                padding: 0px;
+            }
+            input {
+                width: 100%;
+                height: 52px!important;
+                background-color: $white-color;
+                border-radius: 12px;
+                margin: 0px;
+                padding-bottom: 0px;
+                padding-left: 30px!important;
+                background-image: url('../image/mass.png');
+                background-repeat: no-repeat;
+                background-position: 8px 12px;
+                font-size: 14px;
+            }
+            .btn-primariey {
+                top: 10px;
+                right: 8px;
+                padding-top: 14px 25px;
+                border-radius: 12px;
+                background-color: $secondary-color;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+
+/* ------------------- start footer sections -----------------*/
+
+.gutter-25 {
+    margin-bottom: 25px;
+    @include minwidth(991px) {
+        margin-bottom: 0px;
+    }
+}
+
+footer {
+    padding-top: 20px;
+    padding-bottom: 23px;
+    @include minwidth(991px) {
+        padding-top: 46px;
+    }
+    .para-cover {
+        @include minwidth(576px) {
+            padding-top: 39px;
+        }
+        p {
+            font-size: 16px;
+            color: $gray-text-color;
+        }
+    }
+    .list {
+        .h6 {
+            font-weight: $bold;
+            font-size: 16px;
+        }
+        li {
+            @include minwidth(991px) {
+                padding-top: 27px;
+            }
+            a {
+                font-size: 14px;
+                color: $gray-text-color;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .address {
+        .h6 {
+            font-weight: $bold;
+            font-weight: 700;
+        }
+        ul {
+            padding-top: 15px;
+            @include minwidth(991px) {
+                padding-top: 27px;
+            }
+            li,
+            a {
+                font-size: 14px;
+                color: $gray-text-color;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .copyright {
+        font-size: 14px;
+        color: $gray-text-color;
+        margin-bottom: 0px;
+    }
+    .social-icon {
+        li {
+            width: 24px;
+            height: 24px;
+            background-color: $gray-text-color;
+            border-radius: 50%;
+            margin-left: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a {
+                width: 100%;
+                text-align: center;
+                color: $white-color;
+                font-size: 16px;
+            }
+        }
+        li:hover {
+            transition: all 0.4s;
+            margin-top: -5px;
+        }
+    }
+    .padding-top {
+        padding-top: 30px;
+        @include minwidth(991px) {
+            padding-top: 65px;
         }
     }
 }

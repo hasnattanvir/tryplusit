@@ -10,21 +10,23 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-
+    <link rel="stylesheet" href="assets/css/modal-video.min.css">
 
     <title>Home</title>
 </head>
 
 <body>
-    <div class="wrapper">
-        <header class="position-set">
-            <div class="main_div head-bg">
+    <div class="wrapper bg-secondry">
+        <header class="posi tion-set">
+            <div class="main_div he ad-bg">
                 <div class="container">
                     <nav class="navbar  navbar-expand-lg navbar-dark">
                         <div class="logos">
                             <a class="brand" href="index.html">
-                                <img src="assets/image/logo.png" alt="logo">
+                                <!-- <img src="assets/image/logo.png" alt="logo"> -->
+                                <span style="font-size: 18px;">StartUp</span>
                             </a>
                         </div>
 
@@ -38,66 +40,506 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item ">
-                                    <a class="nav-link nav-link-hover" href="/">HOME </a>
+                                    <a class="nav-link nav-link-hover" href="/">Home </a>
                                 </li>
                                 <li class="nav-item ">
-                                    <a class="nav-link nav-link-hover" href="about.html">ABOUT RSBD </a>
+                                    <a class="nav-link nav-link-hover" href="about.html">Services </a>
                                 </li>
 
                                 <li class="nav-item dropdown">
                                     <a class="nav-link nav-link-hover drarrow" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <span>SERVICE</span>
+                                        <span>About</span>
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <div class="inner-div-setpos">
                                             <div class="center-manu">
-                                                <li><a class="dropdown-item" href="services.html">SERVICES</a></li>
-                                                <li><a class="dropdown-item" href="blogdetails.html">BLOG DETAILS</a></li>
-                                                <li><a class="dropdown-item" href="testimonials.html">TESTIMONIALS</a></li>
+                                                <li><a class="dropdown-item" href="services.html">Work</a></li>
+                                                <li><a class="dropdown-item" href="blogdetails.html">Contact</a></li>
+                                                <li><a class="dropdown-item" href="testimonials.html">Blog</a></li>
                                             </div>
                                         </div>
                                     </ul>
                                 </li>
 
                                 <li class="nav-item ">
-                                    <a class="nav-link nav-link-hover" href="faq.html">FAQ </a>
+                                    <a class="nav-link nav-link-hover" href="faq.html">Work </a>
                                 </li>
                                 <li class="nav-item ">
-                                    <a class="nav-link nav-link-hover" href="blog.html">BLOG</a>
+                                    <a class="nav-link nav-link-hover" href="blog.html">Contact</a>
                                 </li>
                                 <li class="nav-item ">
-                                    <a class="nav-link nav-link-hover" href="contact.html">CONTACT </a>
+                                    <a class="nav-link nav-link-hover" href="contact.html">Blog</a>
                                 </li>
                             </ul>
+                            <div class="primary-btn">
+                                <a class="btn btn-primariey">Get a Quoate</a>
+
+                            </div>
+
                         </div>
+
                     </nav>
+
                 </div>
             </div>
         </header>
     </div>
-
-    <section class="sliders">
+    <!---------- start slider section ----------------->
+    <section class="sliders banner-slider bg-secondry">
         <!-- Slider main container -->
         <div class="swiper-container">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide " style="background-image: url('assets/image/banar.jpg'); background-repeat: no-repeat;">
+                    <div class="container">
+                        <div class="inner-box">
+                            <div class="bannar-text">
+                                <h1 class="h1">
+                                    Business goal Achieved with our helper teams
+                                </h1>
+                                <p class="para">
+                                    We are a big business agency engaged in the internet that will help you to grow your business.
+                                </p>
+                                <div class="primary-btn">
+                                    <a class="btn btn-primariey">Get a Quoate</a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div> -->
 
             </div>
         </div>
     </section>
 
 
+    <!-- ------------------ start service section------------ -->
+    <section class="service">
+        <div class="container d-flex justify-content-center">
+            <div class="common-section text-center">
+                <h2 class="h2">our services</h2>
+                <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim, est lorem nisl cursus at non vitae pretium tempor. Pellentesque.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-4 gutter-30">
+                    <div class="service-card">
+                        <div class="inner-card">
+                            <div class="icon-camber cam-1">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <div class="text-camber">
+                                <h2 class="h2">Digital Marketing</h2>
+                                <p class="para">
+                                    The Internet to reach consumers. Digital marketing is a broad field, including attracting customers via email, ect.
+                                </p>
+                                <a href="#" class="a">Learn More.</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-4 gutter-30">
+                    <div class="service-card">
+                        <div class="inner-card">
+                            <div class="icon-camber cam-2">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <div class="text-camber">
+                                <h2 class="h2">Digital Marketing</h2>
+                                <p class="para">
+                                    The Internet to reach consumers. Digital marketing is a broad field, including attracting customers via email, ect.
+                                </p>
+                                <a href="#" class="a">Learn More.</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-4 gutter-30">
+                    <div class="service-card">
+                        <div class="inner-card">
+                            <div class="icon-camber cam-3">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <div class="text-camber">
+                                <h2 class="h2">Digital Marketing</h2>
+                                <p class="para">
+                                    The Internet to reach consumers. Digital marketing is a broad field, including attracting customers via email, ect.
+                                </p>
+                                <a href="#" class="a">Learn More.</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="video">
+        <div class="container d-flex justify-content-center">
+            <div class="common-section text-center">
+                <h2 class="h2">Welcome to Startup</h2>
+                <p class="para">Watch the video below so that you better understand how we work with you</p>
+            </div>
+        </div>
+        <div class="container">
+            <!-- <button class="js-video-button" data-video-id='202177974' data-channel="vimeo">Vimeo</button> -->
+            <!-- <button class="js-video-button" data-channel="facebook" data-video-id="10153231379946729">Facebook</button> -->
+            <div class="video-card">
+                <a href="#" class="js-video-button" data-video-id='_52RK4UMJqA'>
+                    <img src="assets/image/video.png" alt="video">
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <section class="service2">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6 order-last order-md-first mt-3 mt-md-0">
+                    <div class="picture-camber">
+                        <img class="imgs" src="assets/image/img1.png" alt="pohotos">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 ">
+                    <div class="text-camber">
+                        <div class="titles">
+                            <h2 class="h2">Why you need choose us ?</h2>
+                            <p class="para">why do you need to choose us as helpers in your business, namely because as follows:</p>
+                        </div>
+                        <div class="minicard ">
+                            <div class="row">
+                                <div class="col-2">
+                                    <div class="icon-ceamber icon-bg-1">
+                                        <i class="fas fa-bullhorn"></i>
+
+                                    </div>
+                                </div>
+                                <div class="col-10">
+                                    <div class="text-camber">
+                                        <h3 class="h3">the best in the world</h3>
+                                        <p class="para">we are the one who can do everything very well and no one can be as good as us.</p>
+
+                                    </div>
+                                </div>
 
 
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+                            </div>
+                        </div>
+                        <div class="minicard ">
+                            <div class="row">
+                                <div class="col-2">
+                                    <div class="icon-ceamber icon-bg-2">
+                                        <i class="fas fa-bullhorn"></i>
+
+                                    </div>
+                                </div>
+                                <div class="col-10">
+                                    <div class="text-camber">
+                                        <h3 class="h3">the best in the world</h3>
+                                        <p class="para">we are the one who can do everything very well and no one can be as good as us.</p>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="minicard ">
+                            <div class="row">
+                                <div class="col-2">
+                                    <div class="icon-ceamber icon-bg-3">
+                                        <i class="fas fa-bullhorn"></i>
+
+                                    </div>
+                                </div>
+                                <div class="col-10">
+                                    <div class="text-camber">
+                                        <h3 class="h3">the best in the world</h3>
+                                        <p class="para">we are the one who can do everything very well and no one can be as good as us.</p>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="catagori">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="title">
+                        <h2 class="h2">Nood know what does?</h2>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="para-cover">
+                        <p class="para">Here are some of the results of our work together with clients with whom we work together.</p>
+
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6 gutter-58">
+                    <div class="cover-box">
+                        <div class="picture-camber">
+                            <img src="assets/image/cata-img.png" alt="pohotos">
+                        </div>
+                        <div class="text-camber">
+                            <h3 class="h3">Social Media admin</h3>
+                            <p class="para">serves as the brains behind an organization's social media platforms.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6 gutter-58">
+                    <div class="cover-box">
+                        <div class="picture-camber">
+                            <img src="assets/image/cata-img.png" alt="pohotos">
+                        </div>
+                        <div class="text-camber">
+                            <h3 class="h3">Project Management</h3>
+                            <p class="para"> responsible for planning and overseeing projects to ensure they are completed in a timely fashion and within budget.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6 gutter-58">
+                    <div class="cover-box">
+                        <div class="picture-camber">
+                            <img src="assets/image/cata-img.png" alt="pohotos">
+                        </div>
+                        <div class="text-camber">
+                            <h3 class="h3">Digital Marketing</h3>
+                            <p class="para">
+                                The Internet to reach consumers. Digital marketing is a broad field, including attracting customers via email, ect.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6 gutter-58">
+                    <div class="cover-box">
+                        <div class="picture-camber">
+                            <img src="assets/image/cata-img.png" alt="pohotos">
+                        </div>
+                        <div class="text-camber">
+                            <h3 class="h3">SEO Management</h3>
+                            <p class="para">esponsible for planning, implementing and managing company's overall SEO strategy.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 text-center">
+                    <a href="#" class="btn btn-primariey">Let's Talk</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="quoteslider" style="background-image: url('assets/image/grap_back.png');">
+        <div class="rgb-section">
+            <div class="container d-flex justify-content-center">
+                <div class="common-section text-center">
+                    <h2 class="h2">about 1 million clients!</h2>
+                    <p class="para">This is feedback from our clients who have used our services, they are all happy.</p>
+                </div>
+            </div>
+            <div class="container">
+
+                <!-- Slider main container -->
+                <div class="swiper-container quoteslider">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide d-flex justify-content-center">
+                            <div class="container-text">
+                                <div class="inner-box">
+                                    <div class="d-flex justify-content-center">
+                                        <div class="mask-picture d-flex justify-content-center align-items-center">
+                                            <i class="far fa-user"></i>
+                                        </div>
+                                    </div>
+                                    <div class="text-camber text-center">
+
+                                        <div class="qoute d-flex">
+                                            <img class="coma" src="assets/image/left.png" alt="leftcomma">
+                                            <p>Very happy to be working with business, our company is growing very rapidly because of you </p>
+                                            <img class="coma" src="assets/image/right.png" alt="leftcomma">
+                                        </div>
+                                        <h6 class="h6">tiana begerson</h6>
+                                        <p>CEO of Mabar lnc</p>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex justify-content-center">
+                            <div class="container-text">
+                                <div class="inner-box">
+                                    <div class="d-flex justify-content-center">
+                                        <div class="mask-picture d-flex justify-content-center align-items-center">
+                                            <i class="far fa-user"></i>
+
+                                        </div>
+                                    </div>
+                                    <div class="text-camber text-center">
+
+                                        <div class="qoute d-flex">
+                                            <img class="coma" src="assets/image/“left.png" alt="leftcomma">
+                                            <p>Very happy to be working with business, our company is growing very rapidly because of you </p>
+                                            <img class="coma" src="assets/image/“right.png" alt="leftcomma">
+                                        </div>
+                                        <h6 class="h6">tiana begerson</h6>
+                                        <p>CEO of Mabar lnc</p>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex justify-content-center">
+                            <div class="container-text">
+                                <div class="inner-box">
+                                    <div class="d-flex justify-content-center">
+                                        <div class="mask-picture d-flex justify-content-center align-items-center">
+                                            <i class="far fa-user"></i>
+
+                                        </div>
+                                    </div>
+                                    <div class="text-camber text-center">
+
+                                        <div class="qoute d-flex">
+                                            <img class="coma" src="assets/image/“left.png" alt="leftcomma">
+                                            <p>Very happy to be working with business, our company is growing very rapidly because of you </p>
+                                            <img class="coma" src="assets/image/“right.png" alt="leftcomma">
+                                        </div>
+                                        <h6 class="h6">tiana begerson</h6>
+                                        <p>CEO of Mabar lnc</p>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="subscribes">
+        <div class="container d-flex justify-content-center border-radius-12">
+            <div class="common-section text-center">
+                <h2 class="h2">Subscribe to our newsletter</h2>
+                <div class="paras ">
+                    <p class="para text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim, est lorem nisl cursus at non vitae pretium tempor. Pellentesque.</p>
+                </div>
+                <div class="input_cover position-relative">
+                    <form action="/">
+                        <input type="email" placeholder="&nbsp;&nbsp;&nbsp;&nbsp; Enter your email address" required>
+                        <button type="submit" class="position-absolute btn-primariey">Subcribe</button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-secondry">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 gutter-25 col-lg-4">
+                    <div class="para-cover">
+                        <p class="para">We are a big business agency engaged in the internet that will help you to grow your business.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 gutter-25 col-lg-2 d-flex justify-md-content-center">
+                    <div class="list">
+                        <h6 class="h6">Links</h6>
+                        <ul>
+                            <li>
+                                <a href="#">Home</a></a>
+                            </li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 gutter-25 col-lg-2 d-flex justify-md-content-center">
+                    <div class="list">
+                        <h6 class="h6">About</h6>
+                        <ul>
+                            <li><a href="#">Partners</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Community</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 gutter-25 col-lg-4 d-flex justify-md-content-end">
+                    <div class="address">
+                        <h6 class="h6">Contact</h6>
+
+                        <ul>
+                            <li>Bangladesh</li>
+                            <li>noakhali sudaram thana mojib rode</li>
+                            <li>post code 543881</li>
+                        </ul>
+                        <ul>
+                            <li>Bangladesh</li>
+                            <li>noakhali sudaram thana mojib rode</li>
+                            <li>post code 543881</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container ">
+            <div class="padding-top d-sm-flex justify-content-center justify-content-sm-between">
+                <p class="copyright text-center text-sm-left"><a href="#" style="color:#646464">&copy; 2021 hasnattanvir all rights reserved</a></p>
+                <div class="d-flex justify-content-center justify-content-sm-end">
+                    <ul class="social-icon d-flex mt-3 mt-sm-0">
+                        <li>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-youtube-square"></i></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/modal-video.min.js"></script>
+    <script src="assets/js/jquery-modal-video.min.js"></script>
+
+
 
 
 
@@ -111,6 +553,7 @@
             })
         });
     </script>
+
 
 </body>
 

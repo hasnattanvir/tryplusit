@@ -6,38 +6,35 @@ $(document).ready(function() {
         loop: true,
         speed: 700,
         effect: 'slide',
-        // breakpoints: {
-        //     640: {
-        //         slidesPerView: 1,
-        //         spaceBetween: 20,
-        //     },
-        //     700: {
-        //         slidesPerView: 2,
-        //         spaceBetween: 20,
-        //     },
-        //     1024: {
-        //         slidesPerView: 3,
-        //         spaceBetween: 30,
-        //     },
-        // }
+
     });
 
 });
 
 
 $(document).ready(function() {
-    var acc = document.getElementsByClassName("accordion");
-    var i;
+    var swiper = new Swiper('.quoteslider', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        autoplay: true,
+        loop: true,
+        speed: 700,
+        effect: 'slide',
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
 
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            }
-        });
-    }
+    });
+
+});
+
+$(document).ready(function() {
+    $(".js-video-button").modalVideo({
+        youtube: {
+            controls: 0,
+            nocookie: true
+        }
+    });
+
 });
